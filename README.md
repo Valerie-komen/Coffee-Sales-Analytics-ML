@@ -11,11 +11,12 @@
 A specialty coffee roaster selling **Arabica, Excelsa, Liberica, and Robusta** beans across the **US, UK, and Ireland** has three years of order-level transactional data (2019–2022) sitting in a spreadsheet, with no pipeline connecting that raw data to validated business queries, predictive modeling, or a shareable interactive view. This project builds that pipeline end-to-end — and is explicit about where the data does, and does not, support strong predictive claims, rather than presenting only the results that look impressive.
 
 **Research questions:**
-- Which coffee type and roast drive revenue, and is the revenue leader also the margin leader?
-- Which customer characteristics, if any, predict repeat purchase?
-- Do natural customer segments exist, and what distinguishes them?
-- Does loyalty-card enrollment measurably increase spending?
-- What seasonal and country-level patterns exist in demand?
+-	Which coffee type and roast generate the highest revenue and profit?
+-	Which customer characteristics, if any, predict repeat purchases?
+-	Can customers be grouped into meaningful purchasing segments?
+-	Does the loyalty-card program increase customer spending?
+-	What seasonal and country-level patterns exist in sales?
+
 
 ---
 
