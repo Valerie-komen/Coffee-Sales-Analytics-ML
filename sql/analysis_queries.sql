@@ -19,7 +19,8 @@ SELECT o.coffee_name AS coffee_type,
        ROUND(SUM(p.profit * o.quantity), 2) AS total_profit,
        ROUND(100.0 * SUM(p.profit * o.quantity) / SUM(o.sales), 1) AS margin_pct
 FROM orders o
-JOIN products p ON o.product_id = p.product_id
+JOIN products p 
+       ON o.product_id = p.product_id
 GROUP BY o.coffee_name
 ORDER BY margin_pct DESC;
 
@@ -60,7 +61,8 @@ SELECT o.customer_id,
        MAX(o.order_date) AS last_order,
        JULIANDAY(MAX(o.order_date)) - JULIANDAY(MIN(o.order_date)) AS tenure_days
 FROM orders o
-JOIN customers c ON o.customer_id = c.customer_id
+JOIN customers c 
+       ON o.customer_id = c.customer_id
 GROUP BY o.customer_id, c.country, c.loyalty_card
 ORDER BY total_spend DESC
 LIMIT 10;
