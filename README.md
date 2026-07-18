@@ -49,12 +49,12 @@ Source: [`data/raw_data.xlsx`](data/raw_data.xlsx) — 1,000 order lines, 913 un
 
 ## Results
 
-- **Excelsa leads on revenue ($12,306)**, but **Liberica is the most profitable bean (13% margin)** — more than double Robusta's 6%.
-- The **2.5kg bulk tier drives 52.7% of total revenue** from a single SKU size.
-- Only **2.7% of customers (25 of 913) ever placed a second order** — an acquisition-driven business with a large, quantified retention gap.
-- **Loyalty-card enrollment (~49% of customers) shows no measurable lift** in order value ($45.08 mean for members vs. $49.12 for non-members).
-- Sales are seasonal — **peak in June, trough 52% lower in August** — and the 2022 partial-year run-rate trails 2021, a deceleration worth monitoring.
-- **Ireland converts customers about as well as the much larger US market** ($48.53 vs. $50.05 avg. spend/customer); the **UK lags both** ($44.42) — a marketing gap, not a demand ceiling.
+- Excelsa generated the highest revenue ($12,306), while Liberica had the highest profit margin (13%). 
+- The 2.5 kg coffee size accounted for 52.7% of total revenue, making it the top-selling product size. 
+- Only 25 out of 913 customers (2.7%) made a repeat purchase, indicating a low customer retention rate. 
+- Customers enrolled in the loyalty program did not spend more than non-members. 
+- Sales peaked in June and were lowest in August. The 2022 sales trend also suggests slower growth compared to 2021. 
+- The United Kingdom recorded the lowest revenue and spending per customer, suggesting an opportunity to improve customer engagement. 
 
 ![Revenue vs. Margin by Coffee Type](images/revenue_vs_margin.png)
 ![Monthly Seasonality](images/monthly_seasonality.png)
@@ -80,12 +80,9 @@ Source: [`data/raw_data.xlsx`](data/raw_data.xlsx) — 1,000 order lines, 913 un
 ---
 
 ## Dashboard
-
-The original plan called for Power BI; Power BI Desktop wasn't available in the build environment, so this project ships a **self-contained interactive Plotly/HTML dashboard** instead — no server, no paid software, opens directly in any browser. Filter by year; every KPI and chart updates live.
+**Interactive Plotly/HTML Dashboard** Filter by year; every KPI and chart updates live.
 
 ![Dashboard](images/dashboard.png)
-
-*(A reader with Power BI Desktop can rebuild an equivalent report directly from [`data/cleaned_data.csv`](data/cleaned_data.csv) using the measures documented in the technical report, Section 7.)*
 
 ---
 
@@ -157,7 +154,7 @@ Full discussion in the [technical report](report/Technical_Report.pdf) (Sections
 
 ## Responsible AI
 
-Direct PII is stripped before any file is committed; the dataset's geographic imbalance (79% US revenue) is disclosed as a fairness limitation; and the repeat-purchase classification result is reported at face value — including that it doesn't beat a naive baseline — because a fabricated accuracy figure would misrepresent what this data supports. Full discussion in the [technical report](report/Technical_Report.pdf), Section 11.
+Direct PII is stripped before any file is committed; the dataset's geographic imbalance (79% US revenue) is disclosed as a fairness limitation; and the repeat-purchase classification result is reported at face value. Full discussion in the [technical report](report/Technical_Report.pdf), Section 11.
 
 ---
 
